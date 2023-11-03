@@ -34,7 +34,7 @@ export const AboutMe = () => {
             education and customer service. I am a creative thinker and
             problem-solver who loves a challenge. I am a team player who is
             always looking to learn and grow. I am looking for a position where
-            I can use my skills to help a company grow and succeed.
+            I can use my skills to help a company grow and succeed...
           </p>
         </CustomSpan>
       </AboutMeLeftDiv>
