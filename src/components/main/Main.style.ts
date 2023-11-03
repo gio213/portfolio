@@ -47,7 +47,7 @@ const MainLeftDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 50%;
   height: 100%;
   p {
@@ -86,4 +86,31 @@ const CustomP = styled.p`
   color: #444f5a;
 `;
 
-export { MainContainer, MyImgDiv, MainLeftDiv, TypedCursor, CustomP };
+const SocialLinks = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const Cicon = styled.img`
+  width: 30px;
+  height: 30px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+
+    fill: #0564bd;
+  }
+`;
+
+export {
+  MainContainer,
+  MyImgDiv,
+  MainLeftDiv,
+  TypedCursor,
+  CustomP,
+  SocialLinks,
+  Cicon,
+};
