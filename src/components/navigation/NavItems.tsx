@@ -10,6 +10,7 @@ import { BurgerIconStyle } from "./NavItems.style";
 import { ExtendedNavItemsDiv } from "./NavItems.style";
 import { ExtendedNavAhref } from "./NavItems.style";
 import closeIcon from "../../assets/close-icon.png";
+import { useRef } from "react";
 
 export const NavItems = () => {
   const [theme, setTheme] = useState("light");
@@ -18,12 +19,18 @@ export const NavItems = () => {
 
   const handleClick = () => {
     setChecked(!checked);
-    theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
   const handleBurger = () => {
     setBurger(!burger);
-    console.log(burger);
+  };
+  const about = useRef<HTMLDivElement>(null);
+  const scrollInto = (elementRef) => {
+    console.log(elementRef);
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -35,7 +42,9 @@ export const NavItems = () => {
       )}
 
       <NavAhref href="/">Home</NavAhref>
-      <NavAhref href="/about">About</NavAhref>
+      <NavAhref onClick={() => scrollInto(about)} href="about">
+        About
+      </NavAhref>
       <NavAhref href="/projects">Projects</NavAhref>
       <NavAhref href="/contact">Contact</NavAhref>
       <BurgerDiv>

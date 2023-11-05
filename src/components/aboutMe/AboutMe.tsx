@@ -20,10 +20,13 @@ import mysqlIcon from "../../assets/mysql-icon.png";
 import mongoIcon from "../../assets/mongo-icon.png";
 import postGreIcon from "../../assets/postgre-icon.png";
 import bootStrapIcon from "../../assets/Bootstrap-icon.png";
+import { useRef } from "react";
 
 export const AboutMe = () => {
+  const about = useRef<HTMLDivElement>(null);
+
   return (
-    <AboutMeContainer>
+    <AboutMeContainer ref={about}>
       <AboutMeLeftDiv>
         <h1>About Me</h1>
 

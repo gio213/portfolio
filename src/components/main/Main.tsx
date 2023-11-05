@@ -39,7 +39,7 @@ export const Main = () => {
   }, [text, isDeleting]);
 
   return (
-    <MainContainer>
+    <MainContainer id="main">
       <MainLeftDiv>
         <p>Hello! 👋 My name is</p>
         <h1>Giorgi Patsia</h1>

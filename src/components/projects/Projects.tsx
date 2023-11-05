@@ -5,6 +5,7 @@ import { ProjectCard } from "./Projects.style";
 import { ProjectsDiv } from "./Projects.style";
 import { ProjectImage } from "./Projects.style";
 import { ProjectImgDiv } from "./Projects.style";
+import { CustomButton } from "./Projects.style";
 interface ProjectData {
   name: string;
   data: Array<ProjectData>;
@@ -61,7 +62,7 @@ export const Projects: React.FC = () => {
 
             <p>{project.data.description}</p>
             <a href={project.data.url} target="_blank">
-              <button>Live preview</button>
+              <CustomButton>Live preview</CustomButton>
             </a>
           </ProjectCard>
         ))}
