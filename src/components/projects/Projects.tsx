@@ -9,6 +9,10 @@ import { CustomButton } from "./Projects.style";
 interface ProjectData {
   name: string;
   data: Array<ProjectData>;
+  desciption: string;
+  images: Array<string>;
+  url: string;
+  projectName: Array<string>;
 }
 export const Projects: React.FC = () => {
   const scraperApiKey = "pk_59bb0839cc0fa9434896843ae5fe88faee75c033";
@@ -44,11 +48,10 @@ export const Projects: React.FC = () => {
     }
 
     fetchProjectData();
-    console.log(projectData);
   }, []);
 
   return (
-    <ProjectsContainer>
+    <ProjectsContainer id="projects">
       <TiTleDiv>
         <h1>Projects</h1>
       </TiTleDiv>

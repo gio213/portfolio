@@ -2,12 +2,14 @@ import styled from "styled-components";
 
 const AboutMeContainer = styled.main`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   padding-top: 5rem;
+  background-color: ${({ theme }) => theme.bg};
   @media (max-width: 768px) {
     flex-direction: column;
+    height: 100%;
   }
 `;
 
@@ -15,19 +17,18 @@ const AboutMeLeftDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   align-items: center;
   width: 50%;
   height: 100%;
   p {
     font-family: "Roboto", sans-serif;
+    color: ${({ theme }) => theme.text};
   }
   h1 {
     font-family: "Finger Paint", sans-serif;
-
+    color: ${({ theme }) => theme.text};
     margin-bottom: 0.8rem;
     line-height: 1;
-    color: #444f5a;
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -36,6 +37,7 @@ const AboutMeLeftDiv = styled.div`
 
 const CustomSpan = styled.span`
   width: 50%;
+  color: ${({ theme }) => theme.text};
   p {
     opacity: 0.5;
     transform: translateZ(0);
@@ -48,11 +50,12 @@ const SkillsContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 50%;
+  color: ${({ theme }) => theme.text};
 
   h1 {
     font-family: "Finger Paint", sans-serif;
 
-    color: #444f5a;
+    color: ${({ theme }) => theme.text};
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -79,7 +82,6 @@ const ImgTittle = styled.div`
   height: 15%;
   align-items: center;
   display: flex;
-  justify-content: flex-start;
   gap: 0.5rem;
 
   p {

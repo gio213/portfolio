@@ -10,27 +10,22 @@ import { BurgerIconStyle } from "./NavItems.style";
 import { ExtendedNavItemsDiv } from "./NavItems.style";
 import { ExtendedNavAhref } from "./NavItems.style";
 import closeIcon from "../../assets/close-icon.png";
-import { useRef } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export const NavItems = () => {
-  const [theme, setTheme] = useState("light");
   const [checked, setChecked] = useState(false);
   const [burger, setBurger] = useState(false);
 
+  const { theme, setTheme } = ThemeContext();
+
   const handleClick = () => {
     setChecked(!checked);
+    const themeColor = theme === "light" ? "dark" : "light";
+    setTheme(themeColor);
   };
 
   const handleBurger = () => {
     setBurger(!burger);
-  };
-  const about = useRef<HTMLDivElement>(null);
-  const scrollInto = (elementRef) => {
-    console.log(elementRef);
-    window.scrollTo({
-      top: elementRef.current.offsetTop,
-      behavior: "smooth",
-    });
   };
 
   return (
@@ -41,12 +36,9 @@ export const NavItems = () => {
         <NavThemeIcon src={moonIcon} alt="moon-icon" onClick={handleClick} />
       )}
 
-      <NavAhref href="/">Home</NavAhref>
-      <NavAhref onClick={() => scrollInto(about)} href="about">
-        About
-      </NavAhref>
-      <NavAhref href="/projects">Projects</NavAhref>
-      <NavAhref href="/contact">Contact</NavAhref>
+      <NavAhref href="#header">Home</NavAhref>
+      <NavAhref href="#about">About</NavAhref>
+      <NavAhref href="#projects">Projects</NavAhref>
       <BurgerDiv>
         <BurgerIconStyle
           src={burger ? closeIcon : burgerIcon}
@@ -56,10 +48,9 @@ export const NavItems = () => {
       </BurgerDiv>
       {burger ? (
         <ExtendedNavItemsDiv>
-          <ExtendedNavAhref href="/">Home</ExtendedNavAhref>
-          <ExtendedNavAhref href="/about">About</ExtendedNavAhref>
-          <ExtendedNavAhref href="/projects">Projects</ExtendedNavAhref>
-          <ExtendedNavAhref href="/contact">Contact</ExtendedNavAhref>
+          <ExtendedNavAhref href="#header">Home</ExtendedNavAhref>
+          <ExtendedNavAhref href="#about">About</ExtendedNavAhref>
+          <ExtendedNavAhref href="#projects">Projects</ExtendedNavAhref>
         </ExtendedNavItemsDiv>
       ) : null}
     </NavItemsDiv>

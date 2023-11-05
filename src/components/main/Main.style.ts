@@ -2,13 +2,16 @@ import styled from "styled-components";
 import myImg from "../../assets/giorgi.jpeg";
 const MainContainer = styled.main`
   width: 100%;
-  height: 100%;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: 5rem;
+  background-color: ${({ theme }) => theme.bg};
+  color: ${({ theme }) => theme.text};
   @media (max-width: 768px) {
     flex-direction: column;
+    height: 100%;
   }
 `;
 
@@ -53,6 +56,7 @@ const MainLeftDiv = styled.div`
   p {
     font-size: 2rem;
     font-family: "Roboto", sans-serif;
+    color: ${({ theme }) => theme.animatedCursorColor};
   }
   h1 {
     font-family: "Finger Paint", sans-serif;
@@ -60,6 +64,11 @@ const MainLeftDiv = styled.div`
     margin-bottom: 0.8rem;
     line-height: 1;
     color: #444f5a;
+    color: ${({ theme }) => theme.text};
+  }
+  h2 {
+    font-family: "Roboto", sans-serif;
+    color: ${({ theme }) => theme.text};
   }
 `;
 

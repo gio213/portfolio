@@ -20,24 +20,22 @@ import mysqlIcon from "../../assets/mysql-icon.png";
 import mongoIcon from "../../assets/mongo-icon.png";
 import postGreIcon from "../../assets/postgre-icon.png";
 import bootStrapIcon from "../../assets/Bootstrap-icon.png";
-import { useRef } from "react";
 
 export const AboutMe = () => {
-  const about = useRef<HTMLDivElement>(null);
-
   return (
-    <AboutMeContainer ref={about}>
+    <AboutMeContainer id="about">
       <AboutMeLeftDiv>
         <h1>About Me</h1>
 
         <CustomSpan>
           <p>
-            I am a full-stack web developer with a passion for learning and
-            problem-solving. I am a self-taught developer with a background in
-            education and customer service. I am a creative thinker and
-            problem-solver who loves a challenge. I am a team player who is
-            always looking to learn and grow. I am looking for a position where
-            I can use my skills to help a company grow and succeed...
+            I'm a highly motivated full-stack web developer, recently graduated
+            from Becode. I have a strong passion for tackling complex problems
+            and a knack for creative thinking. As a problem-solver, I thrive on
+            challenges and enjoy working collaboratively as part of a team. I'm
+            constantly eager to expand my knowledge and skill set. I'm actively
+            seeking a role where I can contribute my expertise to drive a
+            company's growth and success.
           </p>
         </CustomSpan>
       </AboutMeLeftDiv>

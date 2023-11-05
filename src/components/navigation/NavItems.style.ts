@@ -2,11 +2,16 @@ import styled from "styled-components";
 import colors from "../../colors/colors";
 
 const NavItemsDiv = styled.div`
-  width: 50%;
+  width: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: 0 4rem;
+  color: ${({ theme }) => theme.text};
+  a {
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
 const NavAhref = styled.a`
@@ -19,7 +24,7 @@ const NavAhref = styled.a`
     content: "";
     width: 0;
     height: 2px;
-    background-color: blue;
+    background-color: #0564bd;
     position: absolute;
     bottom: 0;
     transform-origin: left;
@@ -72,13 +77,13 @@ const BurgerIconStyle = styled.img`
 
 const ExtendedNavItemsDiv = styled.div`
   width: 100%;
-  height: 50%;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.light.primary};
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: ${({ theme }) => theme.bg};
+  box-shadow: ${({ theme }) => theme.boxShadow};
   position: absolute;
   gap: 2rem;
   top: 85px;
@@ -92,13 +97,13 @@ const ExtendedNavItemsDiv = styled.div`
 const ExtendedNavAhref = styled.a`
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  color: ${colors.dark.primary};
   transition: all 0.3s ease-in-out;
   border-radius: 5px;
   padding: 0.5rem;
   transform: scale(1);
+  color: ${({ theme }) => theme.text};
   &:hover {
-    background-color: lightblue;
+    background-color: ${({ theme }) => theme.typeCursorColor};
     transition: all 0.3s ease-in-out;
     transform: scale(1.1);
   }

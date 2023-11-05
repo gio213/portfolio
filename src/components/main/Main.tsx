@@ -4,7 +4,7 @@ import { MyImgDiv } from "./Main.style";
 import { TypedCursor } from "./Main.style";
 import { useState, useEffect } from "react";
 import { CustomP } from "./Main.style";
-import exmailIcon from "../../assets/icons8-email-48.png";
+import emailIcon from "../../assets/email-icon.png";
 import github from "../../assets/github-icon.png";
 import linkeDinIcon from "../../assets/linkedin-icon.png";
 import { SocialLinks } from "./Main.style";
@@ -41,7 +41,7 @@ export const Main = () => {
   return (
     <MainContainer id="main">
       <MainLeftDiv>
-        <p>Hello! 👋 My name is</p>
+        <h2>Hello! 👋 My name is</h2>
         <h1>Giorgi Patsia</h1>
 
         <CustomP>
@@ -51,7 +51,7 @@ export const Main = () => {
         </CustomP>
         <SocialLinks>
           <a href="mailto:gio.patsia@gmail.com">
-            <Cicon src={exmailIcon} alt="email" />
+            <Cicon src={emailIcon} alt="email" />
           </a>
           <a
             href="
