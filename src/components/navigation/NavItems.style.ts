@@ -76,7 +76,7 @@ const BurgerIconStyle = styled.img`
 `;
 
 const ExtendedNavItemsDiv = styled.div`
-  width: 100%;
+  width: 80%;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@ const ExtendedNavItemsDiv = styled.div`
   position: absolute;
   gap: 2rem;
   top: 85px;
-  left: 0;
+  left: 10px;
 
   @media (min-width: 768px) {
     display: none;
