@@ -21,8 +21,8 @@ const MyImgDiv = styled.div`
   background-image: url(${myImg});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; /* Center the background image */
-  border: 3px solid #2d2e32;
+  background-position: center center;
+  border: 3px solid ${({ theme }) => theme.text};
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   position: relative;
   transition: all 1s ease-in-out;
