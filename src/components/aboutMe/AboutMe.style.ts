@@ -5,7 +5,6 @@ const AboutMeContainer = styled.main`
   height: 100vh;
   display: flex;
   justify-content: center;
-  padding-top: 5rem;
   background-color: ${({ theme }) => theme.bg};
   @media (max-width: 768px) {
     flex-direction: column;

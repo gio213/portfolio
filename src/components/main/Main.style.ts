@@ -2,7 +2,7 @@ import styled from "styled-components";
 import myImg from "../../assets/giorgi.jpeg";
 const MainContainer = styled.main`
   width: 100%;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
