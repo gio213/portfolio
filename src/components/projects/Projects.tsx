@@ -23,6 +23,7 @@ export const Projects: React.FC = () => {
     weatherApp: `https://jsonlink.io/api/extract?url=https://gio213.github.io/weather-app//&api_key=${scraperApiKey}`,
     mealsRecipe: `https://jsonlink.io/api/extract?url=https://gio213.github.io/Meals-Recipes-Finder/&api_key=${scraperApiKey}`,
     tests: `https://jsonlink.io/api/extract?url=https://gio213.github.io/Tests/&api_key=${scraperApiKey}`,
+    todoapp: `https://jsonlink.io/api/extract?url=https://to-do-app-ivory-nu.vercel.app/&api_key=${scraperApiKey}`,
   };
 
   useEffect(() => {
